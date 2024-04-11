@@ -1,0 +1,133 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.upload-btn {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Style for the logo */
+.upload-btn-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Style for the text */
+.upload-btn-text {
+    margin-left: 5px;
+}
+
+.image-section {
+    position: relative;
+    flex: 0.9;
+    padding: 30px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-200%);
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    object-fit: contain;
+    opacity:1
+}
+
+.logo-overlay img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    transform: translateY(-200%);
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: blue;
+    opacity: 0.2;
+}
+
+.content-section {
+    flex: 0.9;
+    padding: 20px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.color-swatches {
+    margin-bottom: 10px;
+}
+
+.swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.customize-text,
+.upload-text,
+.file-types {
+    margin-bottom: 5px;
+}
+
+.loading-image {
+    visibility: hidden;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width:120px;
+    height:120px;
+    transform: translate(-50%, -50%); /* Center the loading image */
+    animation: rotate 2s linear infinite; /* Rotate animation */
+    filter: invert(0.6) sepia(1) saturate(5) hue-rotate(-120deg); /* for color of loading_icon*/
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
